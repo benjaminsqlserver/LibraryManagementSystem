@@ -1,0 +1,107 @@
+@page "/edit-book-detail"
+@attribute [Authorize]
+
+<PageTitle>Edit BookDetail</PageTitle>
+<div  class="row">
+    <div class="col-md-9">
+        <RadzenLabel style="font-weight: bold" Text="Item no longer available." Visible="@(!canEdit)" />
+    </div>
+    <div class="col-md-3">
+        <RadzenButton ButtonStyle="ButtonStyle.Secondary" style="margin-bottom: 20px" Text="Close" Visible="@(!canEdit)" Click="@CancelButtonClick" />
+    </div>
+</div>
+<div  class="row">
+    <div class="col-md-9">
+        <RadzenLabel style="font-weight: bold" Text="Another user has made conflicting changes to one or more of the fields you have modified. Please reload." Visible="@hasChanges" />
+    </div>
+    <div class="col-md-3">
+        <RadzenButton ButtonStyle="ButtonStyle.Secondary" Icon="autorenew" style="margin-bottom: 20px" Text="Reload" Visible="@hasChanges" Click="@ReloadButtonClick" />
+    </div>
+</div>
+    <div class="col-md-12">
+        <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save BookDetail</RadzenAlert>
+        <RadzenTemplateForm TItem="LibraryManagementSystem.Server.Models.MyLibraryDB.BookDetail" Data="@bookDetail" Visible="@(bookDetail != null && canEdit)" Submit="@FormSubmit">
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="ISBN" Component="ISBN" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@bookDetail.ISBN" Name="ISBN" />
+                    <RadzenRequiredValidator Component="ISBN" Text="ISBN is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="Language" Component="Language" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@bookDetail.Language" Name="Language" />
+                    <RadzenRequiredValidator Component="Language" Text="Language is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="NoOfActualCopies" Component="NoOfActualCopies" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenNumeric style="display: block; width: 100%" @bind-Value="@bookDetail.NoOfActualCopies" Name="NoOfActualCopies" />
+                    <RadzenRequiredValidator Component="NoOfActualCopies" Text="NoOfActualCopies is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="NoOfCurrentCopies" Component="NoOfCurrentCopies" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenNumeric style="display: block; width: 100%" @bind-Value="@bookDetail.NoOfCurrentCopies" Name="NoOfCurrentCopies" />
+                    <RadzenRequiredValidator Component="NoOfCurrentCopies" Text="NoOfCurrentCopies is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="YearOfPublication" Component="YearOfPublication" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenNumeric style="display: block; width: 100%" @bind-Value="@bookDetail.YearOfPublication" Name="YearOfPublication" />
+                    <RadzenRequiredValidator Component="YearOfPublication" Text="YearOfPublication is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="BindingDetail" Component="BindingDetail" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDropDown Data="@bindingDetailsForBindingID" TextProperty="BindingName" ValueProperty="BindingID"
+                         Placeholder="Choose BindingDetail" style="display: block; width: 100%" @bind-Value="@bookDetail.BindingID" Name="BindingID"
+                         Count=@bindingDetailsForBindingIDCount LoadData=@bindingDetailsForBindingIDLoadData />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="CategoryDetail" Component="CategoryDetail" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDropDown Data="@categoryDetailsForCategoryID" TextProperty="CategoryName" ValueProperty="CategoryID"
+                         Placeholder="Choose CategoryDetail" style="display: block; width: 100%" @bind-Value="@bookDetail.CategoryID" Name="CategoryID"
+                         Count=@categoryDetailsForCategoryIDCount LoadData=@categoryDetailsForCategoryIDLoadData />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="BookShelf" Component="BookShelf" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDropDown Data="@bookShelvesForShelfID" TextProperty="" ValueProperty="ShelfID"
+                         Placeholder="Choose BookShelf" style="display: block; width: 100%" @bind-Value="@bookDetail.ShelfID" Name="ShelfID"
+                         Count=@bookShelvesForShelfIDCount LoadData=@bookShelvesForShelfIDLoadData />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end" style="margin-top: 1rem">
+                    <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Icon="save" Text="Save" Style="margin-right: 0.5rem" Variant="Variant.Flat" />
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Text="Cancel" Variant="Variant.Flat" Click="@CancelButtonClick"  />
+                </div>
+            </div>
+        </RadzenTemplateForm>
+    </div>
+

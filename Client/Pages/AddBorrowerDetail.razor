@@ -1,0 +1,72 @@
+@page "/add-borrower-detail"
+@attribute [Authorize]
+
+<PageTitle>Add BorrowerDetail</PageTitle>
+    <div class="col-md-12">
+        <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save BorrowerDetail</RadzenAlert>
+        <RadzenTemplateForm TItem="LibraryManagementSystem.Server.Models.MyLibraryDB.BorrowerDetail" Data="@borrowerDetail" Visible="@(borrowerDetail != null && canEdit)" Submit="@FormSubmit">
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="BorrowedFrom" Component="BorrowedFrom" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDatePicker DateFormat="MM/dd/yyyy" style="display: block; width: 100%" @bind-Value="@borrowerDetail.BorrowedFrom" Name="BorrowedFrom" />
+                    <RadzenRequiredValidator Component="BorrowedFrom" Text="BorrowedFrom is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="BorrowedTo" Component="BorrowedTo" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDatePicker DateFormat="MM/dd/yyyy" style="display: block; width: 100%" @bind-Value="@borrowerDetail.BorrowedTo" Name="BorrowedTo" />
+                    <RadzenRequiredValidator Component="BorrowedTo" Text="BorrowedTo is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="ActualReturnDate" Component="ActualReturnDate" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDatePicker DateFormat="MM/dd/yyyy" style="display: block; width: 100%" @bind-Value="@borrowerDetail.ActualReturnDate" Name="ActualReturnDate" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="BookDetail" Component="BookDetail" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDropDown Data="@bookDetailsForBookID" TextProperty="ISBN" ValueProperty="BookID"
+                         Placeholder="Choose BookDetail" style="display: block; width: 100%" @bind-Value="@borrowerDetail.BookID" Name="BookID"
+                         Count=@bookDetailsForBookIDCount LoadData=@bookDetailsForBookIDLoadData />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="LibraryClient" Component="LibraryClient" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDropDown Data="@libraryClientsForBorrowedBy" TextProperty="FirstName" ValueProperty="LibraryClientID"
+                         Placeholder="Choose LibraryClient" style="display: block; width: 100%" @bind-Value="@borrowerDetail.BorrowedBy" Name="BorrowedBy"
+                         Count=@libraryClientsForBorrowedByCount LoadData=@libraryClientsForBorrowedByLoadData />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="LibraryEmployee" Component="LibraryEmployee" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDropDown Data="@libraryEmployeesForIssuedBy" TextProperty="FirstName" ValueProperty="LibraryEmployeeID"
+                         Placeholder="Choose LibraryEmployee" style="display: block; width: 100%" @bind-Value="@borrowerDetail.IssuedBy" Name="IssuedBy"
+                         Count=@libraryEmployeesForIssuedByCount LoadData=@libraryEmployeesForIssuedByLoadData />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end" style="margin-top: 1rem">
+                    <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Icon="save" Text="Save" Style="margin-right: 0.5rem" Variant="Variant.Flat" />
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Text="Cancel" Variant="Variant.Flat" Click="@CancelButtonClick"  />
+                </div>
+            </div>
+        </RadzenTemplateForm>
+    </div>
+

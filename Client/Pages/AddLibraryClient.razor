@@ -1,0 +1,71 @@
+@page "/add-library-client"
+@attribute [Authorize]
+
+<PageTitle>Add LibraryClient</PageTitle>
+    <div class="col-md-12">
+        <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save LibraryClient</RadzenAlert>
+        <RadzenTemplateForm TItem="LibraryManagementSystem.Server.Models.MyLibraryDB.LibraryClient" Data="@libraryClient" Visible="@(libraryClient != null && canEdit)" Submit="@FormSubmit">
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="FirstName" Component="FirstName" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@libraryClient.FirstName" Name="FirstName" />
+                    <RadzenRequiredValidator Component="FirstName" Text="FirstName is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="LastName" Component="LastName" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@libraryClient.LastName" Name="LastName" />
+                    <RadzenRequiredValidator Component="LastName" Text="LastName is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="EmailAddress" Component="EmailAddress" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@libraryClient.EmailAddress" Name="EmailAddress" />
+                    <RadzenRequiredValidator Component="EmailAddress" Text="EmailAddress is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="RegistrationDate" Component="RegistrationDate" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenDatePicker DateFormat="MM/dd/yyyy" style="display: block; width: 100%" @bind-Value="@libraryClient.RegistrationDate" Name="RegistrationDate" />
+                    <RadzenRequiredValidator Component="RegistrationDate" Text="RegistrationDate is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="Password" Component="Password" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenPassword style="display: block; width: 100%" @bind-Value="@libraryClient.Password" Name="Password" />
+                    <RadzenRequiredValidator Component="Password" Text="Password is required" />
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+                <div class="col-md-3">
+                    <RadzenLabel Text="ConfirmPassword" Component="ConfirmPassword" style="width: 100%" />
+                </div>
+                <div class="col-md-9">
+                    <RadzenPassword style="display: block; width: 100%" @bind-Value="@libraryClient.ConfirmPassword" Name="ConfirmPassword" />
+                    <RadzenRequiredValidator Component="ConfirmPassword" Text="ConfirmPassword is required" />
+                    <RadzenCompareValidator Text="Passwords must match" Component="ConfirmPassword" Value="@libraryClient.Password" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end" style="margin-top: 1rem">
+                    <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Icon="save" Text="Save" Style="margin-right: 0.5rem" Variant="Variant.Flat" />
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Text="Cancel" Variant="Variant.Flat" Click="@CancelButtonClick"  />
+                </div>
+            </div>
+        </RadzenTemplateForm>
+    </div>
+

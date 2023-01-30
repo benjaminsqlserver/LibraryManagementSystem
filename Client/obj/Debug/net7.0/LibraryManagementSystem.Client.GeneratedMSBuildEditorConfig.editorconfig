@@ -1,0 +1,165 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = LibraryManagementSystem.Client
+build_property.RootNamespace = LibraryManagementSystem.Client
+build_property.ProjectDir = C:\Users\benmuyik\Downloads\LMS\LMSApp\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\benmuyik\Downloads\LMS\LMSApp\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/AddApplicationRole.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQXBwbGljYXRpb25Sb2xlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/AddApplicationUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQXBwbGljYXRpb25Vc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/AddBindingDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQmluZGluZ0RldGFpbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/AddBookDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQm9va0RldGFpbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/AddBookShelf.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQm9va1NoZWxmLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/AddBorrowerDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQm9ycm93ZXJEZXRhaWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/AddCategoryDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ2F0ZWdvcnlEZXRhaWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/AddLibraryClient.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkTGlicmFyeUNsaWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/AddLibraryEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkTGlicmFyeUVtcGxveWVlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/ApplicationRoles.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Sb2xlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/ApplicationUsers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vycy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/BindingDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmluZGluZ0RldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/BookDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0RldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/BookShelves.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1NoZWx2ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/BorrowerDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9ycm93ZXJEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/CategoryDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/EditApplicationUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEFwcGxpY2F0aW9uVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/EditBindingDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEJpbmRpbmdEZXRhaWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/EditBookDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEJvb2tEZXRhaWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/EditBookShelf.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEJvb2tTaGVsZi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/EditBorrowerDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEJvcnJvd2VyRGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/EditCategoryDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdENhdGVnb3J5RGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/EditLibraryClient.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdExpYnJhcnlDbGllbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/EditLibraryEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdExpYnJhcnlFbXBsb3llZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/LibraryClients.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlicmFyeUNsaWVudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/LibraryEmployees.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlicmFyeUVtcGxveWVlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/RegisterApplicationUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJBcHBsaWNhdGlvblVzZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/ResetPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXRQYXNzd29yZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Pages/Unauthorized.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVW5hdXRob3JpemVkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Shared/LoginLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luTGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/Shared/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/benmuyik/Downloads/LMS/LMSApp/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
